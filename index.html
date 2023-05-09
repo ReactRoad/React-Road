@@ -14,11 +14,24 @@
      * 두 번째 property로 id나 class, style
      * 세 번째 property로 contents(내용)
      */
-    const span = React.createElement(
-      "span",
-      { id: "sexy-span", style: { color: "red" } },
-      "Hello I'm a Span"
+    const h3 = React.createElement(
+      "h3",
+      {
+        onMouseEnter: () => console.log("mouse enter"),
+      },
+      "Hello I'm a h3"
     );
-    ReactDOM.render(span, root); // span을 root에 배치
+    const btn = React.createElement(
+      "button",
+      {
+        onClick: () => console.log("im clicked"),
+        style: {
+          backgroundColor: "tomato",
+        },
+      },
+      "Click me"
+    );
+    const container = React.createElement("div", null, [h3, btn]);
+    ReactDOM.render(container, root);
   </script>
 </html>
