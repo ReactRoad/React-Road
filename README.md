@@ -13,3 +13,7 @@
 # HTML 태그를 선택하고 event를 등록하면 간단해짐
 
 # jsx로 h3,button 태그 바꾸기, babel로 변환하는 법
+
+# component로 만드는 법 -> 첫 글자는 반드시 대문자
+
+# function(){}과 const xx =()=>()은 쓰임이 같음

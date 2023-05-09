@@ -9,15 +9,17 @@
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
   <!-- 코드를 babel로 변환 -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  
+
   <script type="text/babel">
     const root = document.getElementById("root");
     // JSX(JavaScript XML)
-    const Title = (
-      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
-        Hello I'm a title
-      </h3>
-    );
+    function Title() {
+      return (
+        <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+          Hello I'm a title
+        </h3>
+      );
+    }
     /* span에 대한 Property
      * 첫 번째 property로 HTML 태그
      * 두 번째 property로 id나 class, style
@@ -32,7 +34,7 @@
       "Hello I'm a h3"
     );
     */
-    const Button = (
+    const Button = () => (
       <button
         style={{ backgroundColor: "tomato" }}
         onClick={() => console.log("im clicked")}
@@ -52,7 +54,16 @@
       "Click me"
     );
     */
+    /* 렌더링 방식
     const container = React.createElement("div", null, [Title, Button]);
-    ReactDOM.render(container, root);
+    */
+    //생성한 컴포넌트들을 다른 컴포넌트에 넣기
+    const Container = () => (
+      <div>
+        <Title />
+        <Button />
+      </div>
+    );
+    ReactDOM.render(<Container />, root);
   </script>
 </html>
