@@ -1,4 +1,4 @@
-# part2, part3 🫠
+## part2 jsx basic🫠
 
 # 순수 바닐라 JS로 먼저 구현(vanilla.html)
 
@@ -17,3 +17,9 @@
 # component로 만드는 법 -> 첫 글자는 반드시 대문자
 
 # function(){}과 const xx =()=>()은 쓰임이 같음
+
+## part3 state🫠
+
+# 이전에 했던 Title, Button 컴포넌트를 지움
+
+# 기존에 있던 ReactDOM.render(<Container />, root);로 render 함수를 만들어서 클릭했을 떄 숫자를 셀 수 있게 만들어줌
