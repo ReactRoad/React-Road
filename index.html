@@ -7,13 +7,23 @@
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <!-- react-dom : library & package (react element를 html에 두는 역할)-->
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script>
+  <!-- 코드를 babel로 변환 -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <script type="text/babel">
     const root = document.getElementById("root");
+    // JSX(JavaScript XML)
+    const Title = (
+      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm a title
+      </h3>
+    );
     /* span에 대한 Property
      * 첫 번째 property로 HTML 태그
      * 두 번째 property로 id나 class, style
      * 세 번째 property로 contents(내용)
      */
+    /*
     const h3 = React.createElement(
       "h3",
       {
@@ -21,6 +31,16 @@
       },
       "Hello I'm a h3"
     );
+    */
+    const Button = (
+      <button
+        style={{ backgroundColor: "tomato" }}
+        onClick={() => console.log("im clicked")}
+      >
+        Click me{" "}
+      </button>
+    );
+    /*
     const btn = React.createElement(
       "button",
       {
@@ -31,7 +51,8 @@
       },
       "Click me"
     );
-    const container = React.createElement("div", null, [h3, btn]);
+    */
+    const container = React.createElement("div", null, [Title, Button]);
     ReactDOM.render(container, root);
   </script>
 </html>

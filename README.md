@@ -11,3 +11,5 @@
 # 귀찮게 버튼 생성해서 id값 부여해서 event 만드는 것 대신
 
 # HTML 태그를 선택하고 event를 등록하면 간단해짐
+
+# jsx로 h3,button 태그 바꾸기, babel로 변환하는 법
