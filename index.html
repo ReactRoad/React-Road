@@ -4,30 +4,36 @@
     <div id="root"></div>
   </body>
   <!-- react : interactive UI -->
-  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
   <!-- react-dom : library & package (react element를 html에 두는 역할)-->
-  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
   <!-- 코드를 babel로 변환 -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-    const root = document.getElementById("root");
     function App() {
-      const [counter, setCounter] = React.useState(0);
-      const onClick = () => {
-        /*1. 직접 값 설정
-         *setCounter(counter + 1);
-         */
-        //2. 함수로 전달
-        setCounter((current) => current + 1);
+      const [minutes, setMinutes] = React.useState();
+      const onChange = (event) => {
+        setMinutes(event.target.value);
       };
       return (
-        <div>
-          <h3>Total clicks: {counter}</h3>
-          <button onClick={onClick}>Click me </button>
+        <div className="hi">
+          <h1>Super Converter</h1>
+          <label htmlFor="minutes">Minutes</label>
+          <input
+            value={minutes}
+            id="minutes"
+            placeholder="Minutes"
+            type="number"
+            onChange={onChange}
+          />
+          <h4>You want to convert {minutes}</h4>
+          <label htmlFor="hours">Hours</label>
+          <input id="hours" placeholder="Hours" type="number" />
         </div>
       );
     }
 
+    const root = document.getElementById("root");
     ReactDOM.render(<App />, root);
   </script>
 </html>

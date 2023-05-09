@@ -23,3 +23,7 @@
 # 이전에 했던 Title, Button 컴포넌트를 지움
 
 # 기존에 있던 ReactDOM.render(<Container />, root);로 render 함수를 만들어서 클릭했을 떄 숫자를 셀 수 있게 만들어줌
+
+# for, class ... js문법이므로 jsx에서는 htmlFor, className ... 이런 것으로 써야함
+
+# 브라우저 개발자 도구에서는 js문법으로 통일되어서 보여줌
