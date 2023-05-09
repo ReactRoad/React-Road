@@ -14,7 +14,11 @@
     function App() {
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        /*1. 직접 값 설정
+         *setCounter(counter + 1);
+         */
+        //2. 함수로 전달
+        setCounter((current) => current + 1);
       };
       return (
         <div>
