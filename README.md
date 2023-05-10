@@ -70,3 +70,7 @@
 - flipped state는 boolean으로, 각 input의 disabled 속성을 true, false로 설정하는 데 이용한다.
 - Flip 버튼을 누르면 amount state를 초기화하고, 각 input의 disabled 속성을 바꿔준다.
 - flipped의 상태에 따라 각 input의 value를 계산해내는 방법을 다르게 한다.(삼항연산자 활용)
+
+### 3.8
+
+- (Recap) state를 활용해서 값을 다르게 렌더링하거나 기능을 구현할 수 있다.
