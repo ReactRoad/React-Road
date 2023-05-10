@@ -64,3 +64,9 @@
 - 만약 onChange 이벤트를 삭제하면, value가 minutes로 설정되어있고 minutes state가 바뀌지 않기 때문에 input창의 값을 바꿀 수 없다.
 - minutes를 60으로 나눈 값을 hours input의 value로 준다.
 - hours input에 disabled 속성을 주면 input에 접근할 수 없게 된다.
+
+### 3.7
+
+- flipped state는 boolean으로, 각 input의 disabled 속성을 true, false로 설정하는 데 이용한다.
+- Flip 버튼을 누르면 amount state를 초기화하고, 각 input의 disabled 속성을 바꿔준다.
+- flipped의 상태에 따라 각 input의 value를 계산해내는 방법을 다르게 한다.(삼항연산자 활용)
