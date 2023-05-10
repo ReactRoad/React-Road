@@ -35,6 +35,7 @@
 
 - 리렌더링 함수를 계속해서 실행시키는 것 말고 최고의 방법으로 변화를 반영하려면, useState를 활용한다.
 - useState로 불러온 배열의 첫 번째 요소는 우리가 담으려는 data값이고, 두 번째 요소는 data를 바꿀 때 사용할 modifier이다.
+- useState의 인자에는 초기값을 넣어준다.
 
 ### 3.2
 
@@ -50,3 +51,10 @@
 - setState 함수로 state를 변경하는 방법은 2가지다. setState 함수에 새로운 값을 넣어 변경해주는 것, 현재 값을 이용해 새로운 값을 계산해 내는 것.
 - 현재 값을 이용해 현재 값을 계산해낼 때는 setState 함수 안에 current state를 parameter로 받는 함수를 넣는 것이 안전하다.
 - 인자로 받는 current state가 확실히 현재 값이라는 보장이 생기기 때문.
+
+### 3.5
+
+- 시간 변환하기 구현
+- jsx 문법에서는 for 대신 htmlFor, class 대신 className을 사용해야 한다.
+- input에 onChange이벤트로 입력할 때마다 이벤트핸들링을 할 수 있다.
+- event.target.value로 입력받은 값을 minutes state에 저장해준다.
