@@ -44,3 +44,9 @@
 ### 3.3
 
 - (Recap) modifier 함수를 이용해 state를 바꾸면 컴포넌트가 재생성되고, 코드가 다시 실행된다.
+
+### 3.4
+
+- setState 함수로 state를 변경하는 방법은 2가지다. setState 함수에 새로운 값을 넣어 변경해주는 것, 현재 값을 이용해 새로운 값을 계산해 내는 것.
+- 현재 값을 이용해 현재 값을 계산해낼 때는 setState 함수 안에 current state를 parameter로 받는 함수를 넣는 것이 안전하다.
+- 인자로 받는 current state가 확실히 현재 값이라는 보장이 생기기 때문.
