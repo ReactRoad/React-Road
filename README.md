@@ -58,3 +58,9 @@
 - jsx 문법에서는 for 대신 htmlFor, class 대신 className을 사용해야 한다.
 - input에 onChange이벤트로 입력할 때마다 이벤트핸들링을 할 수 있다.
 - event.target.value로 입력받은 값을 minutes state에 저장해준다.
+
+### 3.6
+
+- 만약 onChange 이벤트를 삭제하면, value가 minutes로 설정되어있고 minutes state가 바뀌지 않기 때문에 input창의 값을 바꿀 수 없다.
+- minutes를 60으로 나눈 값을 hours input의 value로 준다.
+- hours input에 disabled 속성을 주면 input에 접근할 수 없게 된다.
