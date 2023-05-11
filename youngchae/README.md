@@ -108,3 +108,12 @@
 ### 4.3
 
 - (Recap) props는 컴포넌트를 설정할 수 있도록 해주는 유용한 도구다.
+
+<br>
+
+# Part5
+
+### 5.0
+
+- create-react-app을 사용해 node 환경에서 react앱을 실행할 수 있다.
+- create-react-app을 사용하면 html파일에서 사용하던 script태그들 대신 react앱을 위한 패키지가 설치되어 쉽게 사용 가능하다.
