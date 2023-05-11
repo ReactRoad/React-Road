@@ -18,11 +18,15 @@
             ))
         }
 
-        function Container() {
+        function App() {
+            const [counter, setCounter] = useState(0)
+            const handleClick = ()=>{
+                setCounter(counter+1)
+            }
             return (
                 <div>
                     <h3>Total clicks: {counter}</h3>
-                    <button onClick={countUp}>Click me</button>
+                    <button onClick={handleClick}>Click me</button>
                 </div>
             )  
         };
