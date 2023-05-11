@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-    <script tyoe="text/babel">
-        const DOM = ReactDOM.createRoot(document.getElementById("root"))
-        let counter = 0;
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script tyoe="text/babel">
+    const DOM = ReactDOM.createRoot(document.getElementById("root"));
+    let counter = 0;
 
-        function countUp() {
-            counter++;
-            Render();
-        }
+    function countUp() {
+      counter++;
+      Render();
+    }
 
-        function Render() {
-            return (
-                DOM.render(
-                <Container />
-            ))
-        }
+    function Render() {
+      return DOM.render(<Container />);
+    }
 
-        function App() {
-            const [counter, setCounter] = useState(0)
-            const handleClick = ()=>{
-                //setCounter(counter+1)
-                setCounter(current => current+1)
-            }
-            return (
-                <div>
-                    <h3>Total clicks: {counter}</h3>
-                    <button onClick={handleClick}>Click me</button>
-                </div>
-            )  
-        };
-        
-        Render();
-    </script>
+    function App() {
+      const [counter, setCounter] = useState(0);
+      const handleClick = () => {
+        //setCounter(counter+1)
+        setCounter((current) => current + 1);
+        //현재의  state를 가지고 다음 state 값을 계산해냄
+        //current가 현재 값이라는 것을 보장함. 더 안전한 방법.
+      };
+      return (
+        <div>
+          <h3>Total clicks: {counter}</h3>
+          <button onClick={handleClick}>Click me</button>
+        </div>
+      );
+    }
+
+    Render();
+  </script>
 </html>
