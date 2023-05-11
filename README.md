@@ -64,12 +64,12 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://github.com/seongm2n"><img align="center" width="40" height="40" src="https://avatars.githubusercontent.com/u/62044613?v=4"><br /><sub><b>seongmin</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>kyounghye</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>haein</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/seongm2n"><img align="center" width="50" height="50" src="https://avatars.githubusercontent.com/u/62044613?v=4"/><br /><sub><b>seongmin</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/kyoungg"><img align="center" width="50" height="50" src="https://avatars.githubusercontent.com/u/123715126?v=4"/><br /><sub><b>kyounghye</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/LHI0915"><img align="center" width="50" height="50" src="https://avatars.githubusercontent.com/u/41470637?v=4"/><br /><sub><b>haein</b></sub></a><br /></td>
      </tr>
-      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>youngchae</b></sub></a><br /></td>
-      <td align="center"><a href=""><img src="" width="100px;" alt=""/><br /><sub><b>jinhyi</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/0chae01"><img align="center" width="50" height="50" src="https://avatars.githubusercontent.com/u/124250465?v=4"/><br /><sub><b>youngchae</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/2022IHU"><img align="center" width="50" height="50" src="https://avatars.githubusercontent.com/u/108668200?v=4"/><br /><sub><b>jinhyi</b></sub></a><br /></td>
     </tr>
   </tbody>
 </table>
