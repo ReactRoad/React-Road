@@ -1,4 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <body></body>
+  <body>
+    <div id="root"></div>
+  </body>
+  <!-- react : interactive UI -->
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <!-- react-dom : library & package (react element를 html에 두는 역할)-->
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <!-- 코드를 babel로 변환 -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Btn({ banana, big }) {
+      return (
+        <button
+          style={{
+            backgroundColor: "tomato",
+            color: "white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: 10,
+            fontSize: big ? 18 : 15,
+          }}
+        >
+          {banana}
+        </button>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <Btn banana="Save Changes" big={true} />
+          <Btn banana="Continue" big={false} />
+        </div>
+      );
+    }
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+  </script>
 </html>
