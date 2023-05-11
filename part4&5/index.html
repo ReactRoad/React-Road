@@ -10,28 +10,38 @@
   <!-- 코드를 babel로 변환 -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-    function Btn({ banana, big }) {
+    function Btn({ text, onClick }) {
+      console.log(text, "was rendered");
       return (
         <button
+          onClick={onClick}
           style={{
             backgroundColor: "tomato",
             color: "white",
             padding: "10px 20px",
             border: 0,
             borderRadius: 10,
-            fontSize: big ? 18 : 15,
+            fontSize: 16,
           }}
         >
-          {banana}
+          {text}
         </button>
       );
     }
 
+    /* React.memo()
+     * 재사용성이 좋은 리액트에서 상태 state가 변경될 때마다 rendering 한다면 문제가 생길 수 있다.
+     * 이런 문제를 사전에 방지 하는 것이 React.memo
+     */
+    const MemorizedBtn = React.memo(Btn);
+
     function App() {
+      const [value, setValue] = React.useState("Save Changes");
+      const changeValue = () => setValue("Revert Changes");
       return (
         <div>
-          <Btn banana="Save Changes" big={true} />
-          <Btn banana="Continue" big={false} />
+          <MemorizedBtn text={value} onClick={changeValue} />
+          <MemorizedBtn text="Continue" />
         </div>
       );
     }
