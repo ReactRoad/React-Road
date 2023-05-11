@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState } from "react";
+import Button from "./Button";
+import styles from "./App.module.css";
 
 //정의되지 않은 props에 대한 기본값을 설정한다.
 const Btn = ({ title, changeValue, fontSize = 16 }) => {
@@ -40,6 +42,8 @@ function App() {
       않는다!!*/}
       <Btn title={value} changeValue={changeValue} fontSize={18} />
       <Btn title="Contiue" />
+      <Button text={"히히 난 버튼"} />
+      <h1 className={styles.title}>히히 난 타이틀</h1>
     </>
   );
 }
