@@ -37,3 +37,11 @@
 ## part7
 
 ### to-do-list
+
+##### const food = [1,2,3,4]
+
+##### [6, food] -> [6, Array(4)]0: 61: (4) [1, 2, 3, 4]length: 2[[Prototype]]: Array(0)
+
+##### [6,...food] -> [6, 1, 2, 3, 4]
+
+##### setToDos((currentArray) => [toDo, ...currentArray]); -> 함수 매개변수로 전달되는 배열 객체의 참조(reference)가 전달
