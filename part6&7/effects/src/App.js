@@ -10,10 +10,17 @@ function App() {
 		console.log('I run only once.');
 	}, []);
 	useEffect(() => {
-		if (keyword !== '' && keyword.length > 5) {
-			console.log("I run when 'keyword' changes.");
-		}
+		console.log("I run when 'keyword' changes.");
 	}, [keyword]);
+
+	useEffect(() => {
+		console.log("I run when 'counter' changes.");
+	}, [counter]);
+  
+  //두가지 state를 합칠 수 있음
+	useEffect(() => {
+		console.log("I run when 'keyword & counter' changes.");
+	}, [keyword, counter]);
 
 	return (
 		<div>

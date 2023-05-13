@@ -11,3 +11,5 @@
 ##### 두번째 argument는 마법 같은 친구 ,
 
 ##### useEffect(() => {console.log('SEARCH FOR', keyword);}, [keyword]); -> counter가 실행되도 대괄호 안에 keyword는 실행 되지 않음 !! 이 코드는 keyword가 변화할 때만 실행
+
+##### [] 안에 두가지 state 합칠 수 있음
