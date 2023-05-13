@@ -6,10 +6,12 @@
 
 ##### state가 변화하던, 무슨 일이 일어나던 코드가 한번만 실행될 거라고 확신할 수 있음
 
-##### 첫번째 argument는 딱 한번만 실행하고 싶은 코드
+##### 첫번째 argument는 딱 한번만 실행하고 싶은 코드, 아무것도 없는(비어있는) []
 
-##### 두번째 argument는 마법 같은 친구 ,
+##### 두번째 argument는 마법 같은 친구(dependencies)-> react.js가 지켜보아야 하는 것들
 
 ##### useEffect(() => {console.log('SEARCH FOR', keyword);}, [keyword]); -> counter가 실행되도 대괄호 안에 keyword는 실행 되지 않음 !! 이 코드는 keyword가 변화할 때만 실행
 
-##### [] 안에 두가지 state 합칠 수 있음
+##### 배열이기 때문에 [] 안에 원한는 state 여러가지 합칠 수 있음
+
+### useEffect-> state를 변화시킬 때 component를 재실행시키는 것, 언제 코드를 실행할 지 선택권을 가질 수 있음
