@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-function App() {
+function CountAndKeyword() {
 	const [counter, setCounter] = useState(0);
 	const [keyword, setKeyword] = useState('');
 	const onClick = () => setCounter((prev) => prev + 1);
@@ -16,8 +16,8 @@ function App() {
 	useEffect(() => {
 		console.log("I run when 'counter' changes.");
 	}, [counter]);
-  
-  //두가지 state를 합칠 수 있음
+
+	//두가지 state를 합칠 수 있음
 	useEffect(() => {
 		console.log("I run when 'keyword & counter' changes.");
 	}, [keyword, counter]);
@@ -32,6 +32,32 @@ function App() {
 			/>
 			<h1>{counter}</h1>
 			<button onClick={onClick}>click me</button>
+		</div>
+	);
+}
+
+function CleanUp() {
+	const [showing, setShowing] = useState(false);
+	const onClick = () => setShowing((prev) => !prev);
+	return (
+		<div>
+			{showing ? <Hello /> : null}
+			<button onClick={onClick}>{showing ? 'Hide' : 'Show'}</button>
+		</div>
+	);
+}
+
+function Hello() {
+	return <h1>Hello</h1>;
+}
+
+function App() {
+	return (
+		<div>
+			<CountAndKeyword />
+			<br />
+			<hr />
+			<CleanUp />
 		</div>
 	);
 }
