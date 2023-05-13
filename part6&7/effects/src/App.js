@@ -48,6 +48,31 @@ function CleanUp() {
 }
 
 function Hello() {
+	/*
+	function byeFn() {
+		console.log('Bye 🥲');
+	}
+	function hiFn() {
+		console.log('Hi 🥳');
+		return byeFn;
+	}
+	useEffect(hiFn, []);
+	return <h1>Hello</h1>;
+  */
+
+	/*
+	useEffect(() => {
+		console.log('hi 🤪 ');
+		return () => console.log('bye 🙃');
+	}, []);
+  //아래 함수와 같음
+  */
+	useEffect(function () {
+		console.log('hi 🤪 ');
+		return function () {
+			console.log('bye 🙃');
+		};
+	}, []);
 	return <h1>Hello</h1>;
 }
 
@@ -57,6 +82,7 @@ function App() {
 			<CountAndKeyword />
 			<br />
 			<hr />
+			<br />
 			<CleanUp />
 		</div>
 	);

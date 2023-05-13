@@ -15,3 +15,21 @@
 ##### 배열이기 때문에 [] 안에 원한는 state 여러가지 합칠 수 있음
 
 ### useEffect-> state를 변화시킬 때 component를 재실행시키는 것, 언제 코드를 실행할 지 선택권을 가질 수 있음
+
+##### return () => console.log('destroyed 🥲'); -> clean up function
+
+##### 정리(clean-up)를 이용하는 Effects
+
+##### 위에서 정리(clean-up)가 필요하지 않은 side effect를 보았지만, 정리(clean-up)가 필요한 effect도 있음
+
+##### 외부 데이터에 구독(subscription)을 설정해야 하는 경우, 이런 경우에 메모리 누수가 발생하지 않도록 정리(clean-up)하는 것은 매우 중요
+
+##### effect에서 함수를 반환하는 이유는 무엇일까요?
+
+##### 이는 effect를 위한 추가적인 정리(clean-up) 메커니즘
+
+##### 모든 effect는 정리를 위한 함수를 반환
+
+##### React가 effect를 정리(clean-up)하는 시점은 정확히 언제일까요?
+
+##### React는 컴포넌트가 마운트 해제되는 때에 정리(clean-up)를 실행합니다. 하지만 위의 예시에서 보았듯이 effect는 한번이 아니라 렌더링이 실행되는 때마다 실행됩니다. React가 다음 차례의 effect를 실행하기 전에 이전의 렌더링에서 파생된 effect 또한 정리하는 이유가 바로 이 때문입니다.
