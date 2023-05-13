@@ -1,4 +1,3 @@
-
 ## part6 Effects
 
 ##### state를 변경할 때 모ㄴ code들은 다시 실행, alwayssssss
@@ -10,3 +9,5 @@
 ##### 첫번째 argument는 딱 한번만 실행하고 싶은 코드
 
 ##### 두번째 argument는 마법 같은 친구 ,
+
+##### useEffect(() => {console.log('SEARCH FOR', keyword);}, [keyword]); -> counter가 실행되도 대괄호 안에 keyword는 실행 되지 않음 !! 이 코드는 keyword가 변화할 때만 실행
