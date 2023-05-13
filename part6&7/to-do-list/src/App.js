@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function TodoList() {
 	const [toDo, setToDo] = useState('');
-	const [toDos, setToDos] = useState('');
+	const [toDos, setToDos] = useState([]);
 	const onChange = (event) => setToDo(event.target.value);
 	const onSubmit = (event) => {
 		event.preventDefault();
@@ -12,7 +12,6 @@ function TodoList() {
 		setToDos((currentArray) => [toDo, ...currentArray]);
 		setToDo('');
 	};
-	console.log(toDos);
 
 	return (
 		<div>
@@ -26,6 +25,12 @@ function TodoList() {
 				/>
 				<button>Add To Do</button>
 			</form>
+			<hr />
+			<ul>
+				{toDos.map((item, index) => (
+					<li key={index}>{item}</li>
+				))}
+			</ul>
 		</div>
 	);
 }
