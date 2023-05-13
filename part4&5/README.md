@@ -15,3 +15,7 @@
 ###### React.memo() : 컴포넌트가 React.memo()로 wrapping 될 때, React는 컴포넌트를 렌더링하고 결과를 메모이징한다. 그리고 다음 렌더링이 일어날 때 props가 같다면 react는 메모이징된 내용을 재사용
 
 ##### 만약에 TypeScript로 리액트를 한다면 , 굳이 PropType을 안써도 된다.
+
+## part5
+
+##### CRA(Create React App)
