@@ -1,5 +1,6 @@
 import { useState } from 'react';
-function App() {
+
+function TodoList() {
 	const [toDo, setToDo] = useState('');
 	const [toDos, setToDos] = useState('');
 	const onChange = (event) => setToDo(event.target.value);
@@ -25,6 +26,14 @@ function App() {
 				/>
 				<button>Add To Do</button>
 			</form>
+		</div>
+	);
+}
+
+function App() {
+	return (
+		<div>
+			<TodoList />
 		</div>
 	);
 }
