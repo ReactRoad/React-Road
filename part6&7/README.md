@@ -61,3 +61,7 @@
 ##### Routes와 components 폴더 생성 후 파일을 나눔, npm i react-router-dom으로 컴포넌트 생성
 
 ##### Movie.js에서 title에 상세페이지 이동 설정, App.js에서 home,detail로 가는 경로 설정
+
+##### detail 페이지에서 id 찾기, props, propType, useParms으로 데이터간 이동
+
+##### useParams는 url의 상세정보를 알려주는 친구
