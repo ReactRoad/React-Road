@@ -14,7 +14,7 @@ const Movie = ({ title, coverImg, genres, summary, id }) => {
           return <li key={genres}>{genres}</li>;
         })}
       </ul>
-      <p>{summary}</p>
+      <p>{summary.length > 233 ? `${summary.slice(0, 233)}` : summary}</p>
     </div>
   );
 };
