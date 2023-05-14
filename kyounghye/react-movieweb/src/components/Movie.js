@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Movie = ({ title, coverImg, genres, summary }) => {
+const Movie = ({ title, coverImg, genres, summary, id }) => {
   return (
     <div>
       <h2>
-        {/* a태그 대신 Link 태그를 사용합니다~ */}
-        <Link to="/movie">{title}</Link>
+        {/* a태그 대신 Link 태그를 사용합니다~ + link to에 id값도 넘겨줍니다~ */}
+        <Link to={`/movie/${id}`}>{title}</Link>
       </h2>
       <img src={coverImg} alt={title} />
       <ul>
@@ -20,6 +20,7 @@ const Movie = ({ title, coverImg, genres, summary }) => {
 };
 
 Movie.propTypes = {
+  id: PropTypes.number.isRequired,
   coverImg: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,

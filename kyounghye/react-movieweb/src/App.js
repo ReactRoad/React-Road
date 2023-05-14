@@ -10,7 +10,7 @@ function App() {
       {/*한번에 하나의 라우터만 랜더링하기위해 사용*/}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movie" element={<Detail />} />
+        <Route path="/movie/:id" element={<Detail />} />
       </Routes>
     </Router>
   );
