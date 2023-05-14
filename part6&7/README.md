@@ -65,3 +65,7 @@
 ##### detail 페이지에서 id 찾기, props, propType, useParms으로 데이터간 이동
 
 ##### useParams는 url의 상세정보를 알려주는 친구
+
+### last touch
+
+##### <p>{summary.length > 235 ? `${summary.slice(0, 235)}` : summary}</p> -> summary 길이가 235보다 크면 slice를 이용해서 0~235글자까지 보여주고 아니면 전체를 보여줌
