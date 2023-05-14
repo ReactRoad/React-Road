@@ -49,4 +49,8 @@
 ### coin tracker 
 ##### coin api에는 이미 key가 있으므로 없어도 됨, setCoins(json)이 호출되어서 coins의 상태 변수가 업데이트되고 이전 값에서 새로운 값으로 변경
 ##### coins에서 원하는 데이터만 뽑기 위해 coins.map((coin)=> {coin.name} ({coin,symbol}):${coin.quotes.USD.price}USD)의 데이터만 묶어서 보여줌 
-### 챌린지! USD -> BTC로 바꾸기!!! 
+### 챌린지! USD -> BTC로 바꾸기!!!
+
+### finally Movie!!!!!
+##### Moive api 가져와서 브라우저 화면에 출력! 
+
