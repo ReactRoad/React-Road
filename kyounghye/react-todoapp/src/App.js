@@ -16,6 +16,11 @@ function App() {
     setTodo("");
     console.log(todos);
   };
+  //음..어렵따
+  const handleDelete = (props) => {
+    console.log(props);
+    setTodos((currentArray) => currentArray.splice(props, 1));
+  };
   return (
     <div>
       <h1> My Todo ({todos.length})</h1>
@@ -26,8 +31,19 @@ function App() {
           placeholder="뭔가 해야할걸 적으렴"
           onChange={onChange}
         />
-        <button>등록</button>
+        <button>추가</button>
       </form>
+      <ul>
+        {todos.map((item, index) => {
+          return (
+            <li key={index}>
+              {item}
+              <button>완료</button>
+              <button onClick={handleDelete}>삭제</button>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
