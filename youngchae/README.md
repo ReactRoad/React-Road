@@ -214,3 +214,7 @@
 - npm run build를 입력하면 build 폴더가 생성되고 압축된 최적화된 코드들이 만들어진다.
 - package.json에 `"homepage": "https://깃허브유저네임.github.io/레포지토리명"`라고 적는다.
 - package.json의 scripts에 `"deploy": "gh-pages -d build", "predeploy": "npm run build"`를 추가해준다.(gh-pages가 build폴더를 웹사이트에 업로드하도록 하는 것)
+
+### 7.8
+
+- description의 길이가 너무 긴 경우 글자수를 기준으로 slice해서 출력하기
