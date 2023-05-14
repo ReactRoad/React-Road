@@ -206,3 +206,11 @@
 - react router는 url에 변수를 적용해 사용할 수 있는 동적 url을 지원한다.
 - 변수로 사용하고 싶은 부분의 앞에는 콜론(`:`)을 적어준다.
 - react-router-dom에서 제공하는 useParams를 이용하면, params를 객체로 받아올 수 있다.
+
+### 7.7
+
+- gh-pages 설치
+- github pages는 우리가 만든 코드들을 볼 수 있게 할 수 있는 툴이다.
+- npm run build를 입력하면 build 폴더가 생성되고 압축된 최적화된 코드들이 만들어진다.
+- package.json에 `"homepage": "https://깃허브유저네임.github.io/레포지토리명"`라고 적는다.
+- package.json의 scripts에 `"deploy": "gh-pages -d build", "predeploy": "npm run build"`를 추가해준다.(gh-pages가 build폴더를 웹사이트에 업로드하도록 하는 것)
