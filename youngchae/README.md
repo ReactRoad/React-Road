@@ -194,3 +194,8 @@
 - React Router를 이용해 페이지 전환을 할 수 있다.(react-router-dom 설치)
 - react router는 페이지의 url에 따라서 알맞은 컴포넌트를 보여준다.
 - 각 페이지들은 routes폴더에 넣어 관리한다.
+
+### 7.5
+
+- react-router-dom으로부터 Browser Router(Router), Routes, Route를 import해와서 App컴포넌트 안에 라우팅해준다.
+- Router>Routes>Route순으로 작성하고 Route의 path에는 해당 url문자열을 적어주고, element에는 출력할 컴포넌트를 적어준다.(6.0 버전 기준)
