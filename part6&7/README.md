@@ -1,6 +1,6 @@
 ## part6 Effects
 
-##### state를 변경할 때 모ㄴ code들은 다시 실행, alwayssssss
+##### state를 변경할 때 모든 code들은 다시 실행, alwayssssss
 
 ##### useEffect는 두개의 argument를 가지는 function, 쉽게 말해서 우리 코드가 딱 한번만 실행될 수 있게 보호
 
