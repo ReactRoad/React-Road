@@ -24,14 +24,14 @@ const Detail = () => {
           <h1> 나 로딩중이야! </h1>
         ) : (
           <div>
+            {console.log(movie)}
             <h2>{movie.title_long}</h2>
             <img src={movie.medium_cover_image} />
-            {/* <ul>
-              {movie.genres.map((genres) => {
-                return <li key={genres}>{genres}</li>;
+            {movie.genres &&
+              movie.genres.map((e) => {
+                return <li key={e}>{e}</li>;
               })}
-            </ul> */}
-            <p>{movie.summary}</p>
+            <p>RUN TIME : {movie.runtime}</p>
           </div>
         )}
       </div>
