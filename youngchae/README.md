@@ -199,3 +199,10 @@
 
 - react-router-dom으로부터 Browser Router(Router), Routes, Route를 import해와서 App컴포넌트 안에 라우팅해준다.
 - Router>Routes>Route순으로 작성하고 Route의 path에는 해당 url문자열을 적어주고, element에는 출력할 컴포넌트를 적어준다.(6.0 버전 기준)
+- a태그만을 이용해서 페이지를 이동하면 전체 페이지가 새로고침된다. 이를 피하기 위해 Link를 사용하면, 전체 페이지 재실행 없이 이동한다.
+
+### 7.6
+
+- react router는 url에 변수를 적용해 사용할 수 있는 동적 url을 지원한다.
+- 변수로 사용하고 싶은 부분의 앞에는 콜론(`:`)을 적어준다.
+- react-router-dom에서 제공하는 useParams를 이용하면, params를 객체로 받아올 수 있다.
