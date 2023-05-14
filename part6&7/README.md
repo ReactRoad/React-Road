@@ -58,4 +58,4 @@
 
 ##### Moive api 가져와서 브라우저 화면에 출력!
 
-##### Routes와 components 폴더 생성 후 파일을 나눔
+##### Routes와 components 폴더 생성 후 파일을 나눔, npm i react-router-dom으로 컴포넌트 생성
