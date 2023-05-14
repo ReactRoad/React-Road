@@ -187,3 +187,10 @@
 
 - Movie App 만들기
 - movie api를 불러와서 이미지, 제목, 줄거리, 장르를 map으로 출력해준다.
+
+### 7.4
+
+- Movie 컴포넌트를 만들고, props로 이미지url, 제목, 줄거리, 장르를 받고, 각 prop의 타입을 지정해준다.
+- React Router를 이용해 페이지 전환을 할 수 있다.(react-router-dom 설치)
+- react router는 페이지의 url에 따라서 알맞은 컴포넌트를 보여준다.
+- 각 페이지들은 routes폴더에 넣어 관리한다.
