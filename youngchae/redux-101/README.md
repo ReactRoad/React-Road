@@ -27,9 +27,15 @@
 - reducer 함수의 두번째 인자는 action이다.
 - 들어온 action으로 state 변경을 어떻게 할 지 정한다.
 - dispatch의 인자로 객체형태의 action을 전달하면 reducer 함수에서 action을 받아올 수 있다.
+- action 객체는 무조건 type을 가져야 한다.
 - reducer 함수에서 action을 체크하고 action에 맞는 작업을 실행해 리턴한다.
 
 ### 1.3
 
 - store를 콘솔에서 보면, subscribe 함수가 존재한다.
 - subscribe 함수는 store 안의 변화를 감지해 인자로 받는 함수를 실행한다.
+
+### 1.4
+
+- (Refactor) if문을 switch문으로 변경(가독성)
+- (Refactor) action type string을 변수로 저장해 사용하기(오타 방지)
