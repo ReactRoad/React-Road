@@ -46,3 +46,9 @@
 
 - todo리스트에 리덕스를 적용하면 투두리스트의 상태를 저장할 수 있다.
 - dispatch로 action을 넘겨줄 때 객체에 입력받은 todo를 text로 넘겨줄 수 있다.
+
+### 2.1
+
+- mutation은 원래의 배열이나 객체를 바꾸는 것이다.
+- 절대 state를 mutate하지 않고, 새로운 state를 생성하고 리턴해야 한다.
+- spread문법으로 원래 state요소를 복사해올 수 있다.
