@@ -70,3 +70,10 @@
 - reducer 함수에서 절대로 state를 mutate 하면 안되고, 새로운 state를 반환해야 했다.
 - 배열 state를 mutation없이 반환하기 위해서 filter를 이용했다.
 - subscribe는 store의 변화를 감지해 작업을 실행시킨다.
+
+## Part 3
+
+### 3.0
+
+- react-redux todo 셋업
+- BrowserRouter, Routes, Route를 react-router-dom으로부터 import해서 라우팅
