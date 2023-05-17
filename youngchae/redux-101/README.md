@@ -100,3 +100,9 @@
 - `useDispatch`는 redux store의 dispatch를 함수에서 사용할 수 있게 해주는 Hook이다.
 - store.js에서 action객체 생성함수를 불러와 dispatch 함수의 인자로 전달하면 reducer가 실행되고 state가 갱신된다.
 - [3.2, 3.3 참고 링크 1](https://react.vlpt.us/redux/05-counter.html) / [3.2, 3.3 참고 링크 2](https://react.vlpt.us/redux/09-connect.html)
+
+### 3.4
+
+- ToDo 컴포넌트를 생성해서 connect함수를 사용해 li태그에 렌더링하기
+- `useSelector`, `useDispatch`를 사용하면 컴포넌트 분리 없이 Home에서 map함수로 렌더링할 수 있다.
+- 삭제 버튼에 이벤트리스너 함수를 연결하고 dispatch로 deleteToDo에 클릭한 버튼의 id를 보내주면 state가 갱신되고 재렌더링된다.

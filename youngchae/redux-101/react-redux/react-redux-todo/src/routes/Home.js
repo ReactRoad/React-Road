@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addToDo } from "../store";
+import { addToDo, deleteToDo } from "../store";
 
 function Home() {
   const [text, setText] = useState("");
@@ -17,6 +17,10 @@ function Home() {
     setText("");
   }
 
+  function onClick(e) {
+    const id = e.target.id;
+    dispatch(deleteToDo(id));
+  }
   return (
     <>
       <h1>To Do</h1>
@@ -26,13 +30,19 @@ function Home() {
       </form>
       <ul>
         {todos.map((todo, idx) => (
-          <li key={idx}>{todo.text}</li>
+          <li key={idx}>
+            {todo.text}
+            <button id={todo.id} onClick={onClick}>
+              DEL
+            </button>
+          </li>
         ))}
       </ul>
     </>
   );
 }
 
+// connect 함수 사용
 // function mapStateToProps(state) {
 //   return { toDos: state };
 // }
