@@ -20,3 +20,16 @@
 - createStore의 인자로는 reducer 함수를 넣어줘야 한다.
 - reducer 함수는 데이터를 수정해주는 함수이고, 리턴값이 application에 있는 data가 된다.
 - reducer 함수 안에서는 데이터가 수정되고 수정된 데이터를 리턴한다.(add or minus의 결정은 action을 통해 가능)
+- reducer 함수의 인자로 현재 state를 받는데, state의 default값을 설정해줄 수 있다.
+
+### 1.2
+
+- reducer 함수의 두번째 인자는 action이다.
+- 들어온 action으로 state 변경을 어떻게 할 지 정한다.
+- dispatch의 인자로 객체형태의 action을 전달하면 reducer 함수에서 action을 받아올 수 있다.
+- reducer 함수에서 action을 체크하고 action에 맞는 작업을 실행해 리턴한다.
+
+### 1.3
+
+- store를 콘솔에서 보면, subscribe 함수가 존재한다.
+- subscribe 함수는 store 안의 변화를 감지해 인자로 받는 함수를 실행한다.
