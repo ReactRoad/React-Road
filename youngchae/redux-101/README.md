@@ -82,3 +82,13 @@
 
 - store.js에서 store를 만들고, action객체 생성 함수, reducer 함수를 만들어서 export 한다.
 - index.js에서는 App 컴포넌트를 react-redux에서 import해온 Provider로 감싸고 store props로 store를 준다.
+
+### 3.2
+
+- 컴포넌트들을 store와 연결시켜주는 connect
+- mapStateToProps는 store로부터 state를 Home으로 가져다준다.(props로)
+- mapStateToProps는 redux store로부터 온 state와 component의 props(옵션)를 인자로 받는 함수다.
+- connect 함수는 리턴값을 Home의 props 객체에 추가해준다.
+- `connect()()` 에서 두번째 괄호 안에는 연결할 컴포넌트명을 적는다.(ES6 Currying?)
+- connect 함수는 현재 버전에서도 여전히 지원되지만, 기본적으로 hooks API를 사용하는 것이 좋다. useSelector 훅을 사용해 store의 state를 바로 가져올 수 있다.
+- `useSelector`는 redux store의 상태를 조회하는 Hook이다. 여기서(Home.js L6)의 state는 `store.getState()` 함수를 호출했을 때의 결과와 같다.
