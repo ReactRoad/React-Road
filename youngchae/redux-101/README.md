@@ -77,3 +77,8 @@
 
 - react-redux todo 셋업
 - BrowserRouter, Routes, Route를 react-router-dom으로부터 import해서 라우팅
+
+### 3.1
+
+- store.js에서 store를 만들고, action객체 생성 함수, reducer 함수를 만들어서 export 한다.
+- index.js에서는 App 컴포넌트를 react-redux에서 import해온 Provider로 감싸고 store props로 store를 준다.
