@@ -39,3 +39,10 @@
 
 - (Refactor) if문을 switch문으로 변경(가독성)
 - (Refactor) action type string을 변수로 저장해 사용하기(오타 방지)
+
+## Part 2
+
+### 2.0
+
+- todo리스트에 리덕스를 적용하면 투두리스트의 상태를 저장할 수 있다.
+- dispatch로 action을 넘겨줄 때 객체에 입력받은 todo를 text로 넘겨줄 수 있다.
