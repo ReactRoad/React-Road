@@ -16,14 +16,12 @@
       const onChange = (event) => {
         setAmount(event.target.value);
       };
-
       const reset = () => setAmount(0);
       //current 값을 반대로 바꾸기
       const onInvert = () => {
         reset();
         setInverted((current) => !current);
       };
-
       return (
         <div className="hi">
           <div>
