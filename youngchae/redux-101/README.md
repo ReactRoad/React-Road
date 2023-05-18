@@ -111,3 +111,7 @@
 
 - useParams를 이용해 디테일페이지의 파라미터를 가져오고, useSelector로 state를 가져와 파라미터와 일치하는 toDo의 text와 id를 적절하게 출력한다.
 - `todoText?.text`에서 `?`는 Javascript Optional Chaining 문법이다.
+
+### 3.6
+
+- (challenge) localStorage에 state 저장하기 구현

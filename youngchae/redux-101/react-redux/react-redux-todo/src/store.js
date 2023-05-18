@@ -17,17 +17,31 @@ export const deleteToDo = (id) => {
   };
 };
 
+JSON.parse(localStorage.getItem("toDos")) ||
+  localStorage.setItem("toDos", JSON.stringify([]));
+
 const reducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
-      return [{ text: action.text, id: Date.now() }, ...state];
+      const addItem = [{ text: action.text, id: Date.now() }, ...state];
+      localStorage.setItem("toDos", JSON.stringify(addItem));
+      return addItem;
+    // return [{ text: action.text, id: Date.now() }, ...state];
     case DELETE:
-      return state.filter((toDo) => toDo.id !== parseInt(action.id));
+      const delItem = state.filter((todo) => todo.id !== parseInt(action.id));
+      localStorage.setItem("toDos", JSON.stringify(delItem));
+      return delItem;
+    // return state.filter((toDo) => toDo.id !== parseInt(action.id));
     default:
       return state;
   }
 };
 
 const store = createStore(reducer);
+
+const save = (state) => {
+  localStorage.setItem("toDos", JSON.stringify(state));
+  return state;
+};
 
 export default store;
