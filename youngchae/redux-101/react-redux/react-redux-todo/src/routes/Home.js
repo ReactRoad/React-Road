@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addToDo, deleteToDo } from "../store";
 
@@ -31,7 +32,7 @@ function Home() {
       <ul>
         {todos.map((todo, idx) => (
           <li key={idx}>
-            {todo.text}
+            <Link to={`/${todo.id}`}>{todo.text}</Link>
             <button id={todo.id} onClick={onClick}>
               DEL
             </button>

@@ -106,3 +106,8 @@
 - ToDo 컴포넌트를 생성해서 connect함수를 사용해 li태그에 렌더링하기
 - `useSelector`, `useDispatch`를 사용하면 컴포넌트 분리 없이 Home에서 map함수로 렌더링할 수 있다.
 - 삭제 버튼에 이벤트리스너 함수를 연결하고 dispatch로 deleteToDo에 클릭한 버튼의 id를 보내주면 state가 갱신되고 재렌더링된다.
+
+### 3.5
+
+- useParams를 이용해 디테일페이지의 파라미터를 가져오고, useSelector로 state를 가져와 파라미터와 일치하는 toDo의 text와 id를 적절하게 출력한다.
+- `todoText?.text`에서 `?`는 Javascript Optional Chaining 문법이다.
