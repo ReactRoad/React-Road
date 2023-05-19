@@ -126,4 +126,11 @@
 ### 4.1
 
 - action을 생성할 때 변수를 생성하고, action 객체를 리턴하는 함수를 만들고 이용해야 했다. 객체 안에서 필수로 사용해야하는 type을 제외하면 이름을 자유롭게 짓고 사용했다.
-- redux toolkit의 createAction 함수를 이용하면 action을 생성하는데, 이 객체는 type과 payload로만 이루어져 있다. 즉, action으로부터 무언가를 받으면 payload에 배치된다.
+- redux toolkit의 `createAction` 함수를 이용하면 action을 생성하는데, 이 객체는 type과 payload로만 이루어져 있다. 즉, action으로부터 무언가를 받으면 payload에 배치된다.
+
+### 4.2
+
+- `createReducer`를 사용하면 기존에 reducer 함수에서 사용하던 switch문을 사용하지 않아도 된다.
+- `createReducer`에서는 state를 mutate하는 것이 가능하다.
+- mutate를 하거나, 새로운 state를 리턴하는 것 둘 다 가능하다.(redux toolkit 내부에서 immerjs를 사용하기 때문) return을 할 때는 꼭 새로운 state여야 한다.
+- `createReducer`의 첫번째 인자는 initialState이고, 두번째 인자 안에서 기존의 switch 문을 대신하는 로직을 작성하면 된다.
