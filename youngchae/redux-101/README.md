@@ -140,3 +140,8 @@
 - `configureStore`는 미들웨어와 함께 store를 생성하는 함수다.
 - `configureStore`를 사용하면 redux dev tools를 사용할 수 있다.
 - 브라우저에서 redux dev tools를 사용하면, action과 state를 시간별로 확인하고 되돌려 볼 수 있다. dispatch를 직접 입력해볼 수도 있다.
+
+### 4.4
+
+- `createSlice`는 createSlice로 만든 slice를 받아 reducer와 action을 모두 자동적으로 생성해준다.
+- 내부적으로는 createAction과 createReducer를 사용하기 때문에 여전히 state의 mutation이 가능하다.
