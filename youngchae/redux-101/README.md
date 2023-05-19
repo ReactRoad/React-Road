@@ -134,3 +134,9 @@
 - `createReducer`에서는 state를 mutate하는 것이 가능하다.
 - mutate를 하거나, 새로운 state를 리턴하는 것 둘 다 가능하다.(redux toolkit 내부에서 immerjs를 사용하기 때문) return을 할 때는 꼭 새로운 state여야 한다.
 - `createReducer`의 첫번째 인자는 initialState이고, 두번째 인자 안에서 기존의 switch 문을 대신하는 로직을 작성하면 된다.
+
+### 4.3
+
+- `configureStore`는 미들웨어와 함께 store를 생성하는 함수다.
+- `configureStore`를 사용하면 redux dev tools를 사용할 수 있다.
+- 브라우저에서 redux dev tools를 사용하면, action과 state를 시간별로 확인하고 되돌려 볼 수 있다. dispatch를 직접 입력해볼 수도 있다.
