@@ -1,5 +1,8 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
+JSON.parse(localStorage.getItem("toDos")) ||
+  localStorage.setItem("toDos", JSON.stringify([]));
+
 const toDos = createSlice({
   name: "toDosReducer",
   initialState: [],
@@ -16,11 +19,15 @@ const toDos = createSlice({
       localStorage.setItem("toDos", JSON.stringify(delItem));
       return delItem;
     },
+    set: (state, action) => {
+      const localTodo = JSON.parse(localStorage.getItem("toDos"));
+      return localTodo;
+    },
   },
 });
 
 const store = configureStore({ reducer: toDos.reducer });
 
-export const { add, remove } = toDos.actions;
+export const { add, remove, set } = toDos.actions;
 
 export default store;

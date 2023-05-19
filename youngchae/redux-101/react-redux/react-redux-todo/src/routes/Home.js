@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { add, remove } from "../store";
+import { add, remove, set } from "../store";
 
 function Home() {
   const [text, setText] = useState("");
   const todos = useSelector((state) => state);
+  const todoData = JSON.parse(localStorage.getItem("toDos"));
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(set());
+  }, []);
 
   function onChange(e) {
     setText(e.target.value);
@@ -22,9 +27,16 @@ function Home() {
     const id = e.target.id;
     dispatch(remove(id));
   }
+
+  function handleReset() {
+    localStorage.clear();
+    todoData.forEach((todo) => dispatch(remove(todo.id)));
+  }
+
   return (
     <>
       <h1>To Do</h1>
+      <button onClick={handleReset}>Reset</button>
       <form onSubmit={onSubmit}>
         <input type="text" value={text} onChange={onChange} />
         <button>Add</button>
