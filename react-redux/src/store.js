@@ -10,7 +10,7 @@ export const addToDo = (text) => {
 	};
 };
 
-export const deleteRoDo = (id) => {
+export const deleteToDo = (id) => {
 	return {
 		type: DELETE,
 		id,
@@ -22,14 +22,12 @@ const reducer = (state = [], action) => {
 		case ADD:
 			return [{ text: action.text, id: Date.now() }, ...state];
 		case DELETE:
-			return state.filter((toDo) => toDo !== action.id);
+			return state.filter((toDo) => toDo.id !== action.id);
 		default:
 			return state;
 	}
 };
 
 const store = createStore(reducer);
-
-store.subscribe();
 
 export default store;
