@@ -145,3 +145,8 @@
 
 - `createSlice`는 createSlice로 만든 slice를 받아 reducer와 action을 모두 자동적으로 생성해준다.
 - 내부적으로는 createAction과 createReducer를 사용하기 때문에 여전히 state의 mutation이 가능하다.
+
+### 4.5
+
+- redux만으로 작성했을 때 길어지는 코드들을 redux toolkit을 활용하면 훨씬 짧게 줄일 수 있다.
+- 끝!
