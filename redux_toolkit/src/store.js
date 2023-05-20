@@ -1,9 +1,10 @@
 import { createStore } from 'redux';
-import { createAction } from '@reduxjs/toolkit';
+import { createAction, createReducer } from '@reduxjs/toolkit';
 
 const addToDo = createAction('ADD');
 const deleteToDo = createAction('DELETE');
 
+/*
 const reducer = (state = [], action) => {
 	//state에 값을 넣으면 브라우저에 상태가 보이게 됌
 	switch (action.type) {
@@ -16,6 +17,13 @@ const reducer = (state = [], action) => {
 			return state;
 	}
 };
+*/
+const reducer = createReducer([], {
+	[addToDo]: (state, action) => {
+		state.push({ text: action.payload, id: Date.now() });
+	},
+	[deleteToDo]: (state, action) => {},
+});
 
 const store = createStore(reducer);
 
