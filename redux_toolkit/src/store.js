@@ -1,28 +1,17 @@
 import { createStore } from 'redux';
+import { createAction } from '@reduxjs/toolkit';
 
-const ADD = 'ADD';
-const DELETE = 'DELETE';
+const addToDo = createAction('ADD');
+const deleteToDo = createAction('DELETE');
 
-const addToDo = (text) => {
-	return {
-		type: ADD,
-		text,
-	};
-};
-
-const deleteToDo = (id) => {
-	return {
-		type: DELETE,
-		id,
-	};
-};
-
-const reducer = (state = ['Hello'], action) => {
+const reducer = (state = [], action) => {
+	//state에 값을 넣으면 브라우저에 상태가 보이게 됌
 	switch (action.type) {
-		case ADD:
-			return [{ text: action.text, id: Date.now() }, ...state];
-		case DELETE:
-			return state.filter((toDo) => toDo.id !== action.id);
+		case addToDo.type:
+			console.log(action);
+			return [{ text: action.payload, id: Date.now() }, ...state];
+		case deleteToDo.type:
+			return state.filter((toDo) => toDo.id !== action.payload);
 		default:
 			return state;
 	}
