@@ -4,25 +4,14 @@ import { createAction, createReducer } from '@reduxjs/toolkit';
 const addToDo = createAction('ADD');
 const deleteToDo = createAction('DELETE');
 
-/*
-const reducer = (state = [], action) => {
-	//state에 값을 넣으면 브라우저에 상태가 보이게 됌
-	switch (action.type) {
-		case addToDo.type:
-			console.log(action);
-			return [{ text: action.payload, id: Date.now() }, ...state];
-		case deleteToDo.type:
-			return state.filter((toDo) => toDo.id !== action.payload);
-		default:
-			return state;
-	}
-};
-*/
 const reducer = createReducer([], {
 	[addToDo]: (state, action) => {
+		//push는 아무것도 리턴하지 않아, 대신 state를 mutate해줌
 		state.push({ text: action.payload, id: Date.now() });
 	},
-	[deleteToDo]: (state, action) => {},
+	[deleteToDo]: (state, action) =>
+		//filter는 state를 mutate하지 않음, filter는 새로운 array를 리턴
+		state.filter((toDo) => toDo.id !== action.payload),
 });
 
 const store = createStore(reducer);
