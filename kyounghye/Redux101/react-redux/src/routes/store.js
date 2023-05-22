@@ -30,6 +30,11 @@ const reducer = (state = [], action) => {
 
 const store = createStore(reducer);
 
+export const actionCreators = {
+  addTodo,
+  deleteToDo,
+};
+
 store.subscribe();
 
 export default store;
