@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { connect } from "react-redux";
 import { actionCreators, addTodo } from "./store";
+import ToDo from "../components/ToDo";
 
 function Home(toDos, dispatch) {
   const [text, setText] = useState("");
@@ -19,6 +20,11 @@ function Home(toDos, dispatch) {
       <form onSubmit={onSubmit}>
         <input type="text" value={text} onChange={onChange} />
         <button>Add</button>
+        <ul>
+          {toDos.map((toDo) => (
+            <ToDo {...toDo} key={toDo.id} />
+          ))}
+        </ul>
       </form>
     </>
   );
