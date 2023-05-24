@@ -29,7 +29,7 @@ function Home() {
           <Loading />
         ) : (
           <>
-            <CategoryName>{category}</CategoryName>
+            <CategoryName>🎬 {category}</CategoryName>
             <MovieList>
               {movies
                 .filter((movie) => movie.genres.includes(category))

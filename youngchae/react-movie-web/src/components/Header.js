@@ -4,16 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const handleCategory = (e) => {
-    console.log(e.currentTarget.lastChildNode);
-  };
-
   return (
     <StyledHeader>
       <Title>
         <Link to={"/"}>MOVIE-WEB</Link>
       </Title>
-      <Menu onClick={handleCategory}>
+      <Menu>
         <NavMenu>
           <div style={{ paddingRight: 10 }}>CATEGORY</div>
           <FontAwesomeIcon icon={faPlay} color={"white"} rotation={90} />
@@ -45,7 +41,7 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px 50px;
+  padding: 20px 60px;
 
   &:nth-child(2):hover {
     & button svg {
@@ -74,7 +70,7 @@ const Menu = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto 20px;
+  margin: auto 0;
 
   &:hover {
     cursor: pointer;
@@ -84,6 +80,10 @@ const Menu = styled.div`
     flex-direction: column;
     position: absolute;
     z-index: 3;
+  }
+
+  & svg {
+    transition: all ease 0.5s;
   }
 
   &:hover svg {
@@ -102,7 +102,7 @@ const CategoryList = styled.ul`
   border: 0.5px solid #ffffff;
   box-sizing: border-box;
   padding: 8px 15px;
-  margin: 0 20px;
+  margin: 0 10px;
   font-size: 18px;
   font-weight: 700;
   right: 50px;

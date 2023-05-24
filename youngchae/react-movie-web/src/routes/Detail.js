@@ -30,7 +30,7 @@ function Detail() {
               {movie.title} ({movie.year})
             </Title>
             <Info>
-              <img src={movie.medium_cover_image} alt={movie.title} />
+              <CoverImage src={movie.medium_cover_image} alt={movie.title} />
               <div id="info">
                 <Genres>
                   <h3>장르</h3>
@@ -63,8 +63,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
 const Movie = styled.div`
@@ -86,6 +84,11 @@ const Info = styled.section`
   justify-content: center;
   width: 80%;
   color: #ffffff;
+`;
+
+const CoverImage = styled.img`
+  width: 230px;
+  height: 345px;
 `;
 
 const Genres = styled.div`
