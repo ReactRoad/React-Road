@@ -6,7 +6,7 @@ import Category from "./routes/Category";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <Routes>
         <Route path="/movie/:id" element={<Detail />} />
