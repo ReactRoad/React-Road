@@ -62,7 +62,7 @@
 ## 🎥완성된 영화웹사이트
 성민 :   
 경혜 :   
-영채 :   
+영채 : [REACT-MOVIE-WEB_youngchae](https://0chae01.github.io/react-movie-web/)   
 해인 :   
 진휘 :   
 
