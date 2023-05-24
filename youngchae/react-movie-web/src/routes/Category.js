@@ -7,7 +7,6 @@ import Loading from "../components/Loading";
 
 function Home() {
   const { category } = useParams();
-  console.log(category);
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {

@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import Movie from "../components/Movie";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Loading from "../components/Loading";
 
 function Home() {
-  const { category } = useParams();
-  console.log(category);
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
