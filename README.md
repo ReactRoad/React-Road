@@ -64,7 +64,7 @@
 경혜 :   
 영채 : [REACT-MOVIE-WEB_youngchae](https://0chae01.github.io/react-movie-web/)   
 해인 :   
-진휘 :   
+진휘 : [REACT-MOVIE-WEB_jinhyi](https://super-squirrel-e9374d.netlify.app/)
 
 ## 🐰 Member
 <table>
