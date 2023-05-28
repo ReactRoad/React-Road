@@ -60,7 +60,7 @@
 🕹️ 질문이 있다면 디스코드방에 서슴없이 올리기 
 
 ## 🎥완성된 영화웹사이트
-성민 :   
+성민 : [REACT-MOVIE seongmin] (https://seongm2n.github.io/react-movie/)
 경혜 :   
 영채 : [REACT-MOVIE-WEB_youngchae](https://0chae01.github.io/react-movie-web/)   
 해인 :   
