@@ -63,7 +63,7 @@
 성민 : [REACT-MOVIE_seongmin](https://seongm2n.github.io/react-movie/)   
 경혜 :   
 영채 : [REACT-MOVIE-WEB_youngchae](https://0chae01.github.io/react-movie-web/)   
-해인 :   
+해인 : [REACT-MOVIE-WEB haein] (https://lhi0915.github.io/react-movie-app/) 
 진휘 : [REACT-MOVIE-WEB_jinhyi](https://super-squirrel-e9374d.netlify.app/)
 
 ## 🐰 Member
